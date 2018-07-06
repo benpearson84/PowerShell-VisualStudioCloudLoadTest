@@ -50,7 +50,7 @@ Param(
         $TestDrop = New-CloudLoadTestDrop -Headers $Auth.Headers -BaseUri $Auth.BaseUri -Verbose
     
         # Publish files to test drop container
-        Set-CloudLoadTestDrop -Headers $Auth.Headers -BaseUri $Auth.BaseUri -TestDrop $TestDrop -TestDirectoryPath $TestDirectoryPath -LoadTestFileName $LoadTestFileName -LoadTestDescription $LoadTestDescription -Verbose
+        Set-CloudLoadTestDrop -Headers $Auth.Headers -BaseUri $Auth.BaseUri -TestDrop $TestDrop -TestDirectoryPath $TestDirectoryPath -LoadTestFileName $LoadTestFileName -Verbose
 
         # Create the test run
         $TestRun = New-CloudLoadTestRun -Headers $Auth.Headers -BaseUri $Auth.BaseUri -TestDrop $TestDrop -LoadTestFileName $LoadTestFileName -LoadTestDescription $LoadTestDescription -Verbose
